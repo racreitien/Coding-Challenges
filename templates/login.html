@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Sunskiff Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <nav id="navbar">
+      <div class="container">
+        <ul>
+          <li><a href="/", "/home">Home</a></li>
+          <li><a href="login">Log In</a></li>
+          <li><a href="register">Sign Up</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <form class="LoginForm">
+      <div class="InputBox">
+        <label>Email: </label>
+        <input type="text" name="name">
+      </div>
+      <div class="InputBox">
+        <label>Password: </label>
+        <input type="text" name="name">
+      </div>
+      <input class="button" type="submit" name="SubmitField" value="Submit">
+    </form>
+  </div>
+
+  <footer id="homePageFooter">
+    <p>Copyright &copy; 2019 Sunskiff LLC</p>
+  </footer>
+  
+</body>
+</html>

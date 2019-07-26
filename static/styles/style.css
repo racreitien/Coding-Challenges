@@ -1,0 +1,73 @@
+body{
+	background-color:#333;
+	color:#eee;
+	font-family:Helvetica, sans-serif;
+	font-size:16px;
+	margin:0;
+}
+
+.container{
+	overflow:hidden;
+}
+
+.button{
+	background-color:#eee;
+	color:#222;
+	padding:10px 20px;
+	margin:10px;
+	font-size:inherit;
+}
+
+.LoginForm{
+	margin:20px;
+	border:dotted 2px;
+	padding:20px;
+}
+
+.LoginForm label{
+	display:block;
+}
+
+.LoginForm .InputBox{
+	padding:10px;
+}
+
+h1{
+	text-align:center;
+}
+
+#MainHeader{
+	background-color:#aaa;
+	font-size:20px;
+	font-style:italic;
+	padding:5px;
+	text-align:center
+	border:
+}
+
+#navbar a:hover{
+	color:#bbb;
+}
+
+#navbar ul{
+	list-style:none;
+	padding:0;
+	text-align:center;
+}
+
+#navbar li{
+	display:inline;
+}
+
+#navbar a{
+	color:#eee;
+	text-decoration:none;
+	font-size:20px;
+	padding:30px;
+}
+
+@media(max-width:600px){
+	#MainHeader{
+		width:100%
+	}
+}
