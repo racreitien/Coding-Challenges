@@ -10,6 +10,10 @@ body{
 	overflow:hidden;
 }
 
+.container-mainPage{
+	margin-top:2em;
+}
+
 .button{
 	background-color:#eee;
 	color:#222;
@@ -18,18 +22,15 @@ body{
 	font-size:inherit;
 }
 
-.LoginForm{
-	margin:20px;
-	border:dotted 2px;
-	padding:20px;
+.Form {
+		border:2px dotted;
+		width:50%;
+		margin:0 auto;
 }
 
-.LoginForm label{
-	display:block;
-}
-
-.LoginForm .InputBox{
-	padding:10px;
+.Form-Item{
+	font: 16px Helvetica;
+	margin:10px;
 }
 
 h1{
@@ -41,8 +42,12 @@ h1{
 	font-size:20px;
 	font-style:italic;
 	padding:5px;
-	text-align:center
-	border:
+	text-align:center;
+	margin:0;
+}
+
+#navbar{
+	background-color:#efefef;
 }
 
 #navbar a:hover{
@@ -51,8 +56,9 @@ h1{
 
 #navbar ul{
 	list-style:none;
-	padding:0;
+	padding:5px;
 	text-align:center;
+	margin:0;
 }
 
 #navbar li{
@@ -60,10 +66,18 @@ h1{
 }
 
 #navbar a{
-	color:#eee;
+	color:#222;
 	text-decoration:none;
-	font-size:20px;
+	font-size:14px;
 	padding:30px;
+}
+
+#homePageFooter{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	margin:5px;
 }
 
 @media(max-width:600px){

@@ -7,33 +7,48 @@
 <body>
 
   <div class="container">
+
+    <header id="MainHeader">
+      <h1>Coding Challenges</h1>
+    </header>
+
     <nav id="navbar">
-      <div class="container">
-        <ul>
-          <li><a href="/", "/home">Home</a></li>
-          <li><a href="login">Log In</a></li>
-          <li><a href="register">Sign Up</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </div>
+      <ul>
+        <li><a href="/", "/home">Home</a></li>
+        <li><a href="login">Log In</a></li>
+        <li><a href="register">Sign Up</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
     </nav>
 
-    <form class="LoginForm">
-      <div class="InputBox">
-        <label>Email: </label>
-        <input type="text" name="name">
+  </div>
+
+  <div class="container-mainPage">
+    <div class="Form">
+
+      <h1>Sign In</h1>
+
+      <form method="POST" action="{{ url_for('login') }}">
+        {{ form.hidden_tag() }}
+        <div class="Form-Item">{{ form.email.label }}</div>
+        <div class="Form-Item">{{ form.email }}</div>
+        <div class="Form-Item">{{ form.password.label }}</div>
+        <div class="Form-Item">{{ form.password }}</div>
+        <div class="Form-Item">{{ form.remember.label }}</div>
+        <div class="Form-Item">{{ form.remember }}</div>
+        <div class="button">{{ form.submit }}</div>
+      </form>
+
+      <div class="Form-Item">
+        <small><a href=" {{ url_for('register') }} ">Don't Have An Account?</a></small>
       </div>
-      <div class="InputBox">
-        <label>Password: </label>
-        <input type="text" name="name">
-      </div>
-      <input class="button" type="submit" name="SubmitField" value="Submit">
-    </form>
+
+    </div>
   </div>
 
   <footer id="homePageFooter">
     <p>Copyright &copy; 2019 Sunskiff LLC</p>
   </footer>
-  
+
 </body>
 </html>

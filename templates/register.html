@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <title>Sunskiff Sign Up</title>
+  <title>Sunskiff Registration</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 </head>
 <body>
 
   <div class="container">
+
+    <header id="MainHeader">
+      <h1>Coding Challenges</h1>
+    </header>
+
     <nav id="navbar">
-      <div class="container">
-        <ul>
-          <li><a href="/", "/home">Home</a></li>
-          <li><a href="login">Log In</a></li>
-          <li><a href="register">Sign Up</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </div>
+      <ul>
+        <li><a href="/", "/home">Home</a></li>
+        <li><a href="login">Log In</a></li>
+        <li><a href="register">Sign Up</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
     </nav>
 
-    <form class="LoginForm">
-      <div class="InputBox">
-        <label>Name: </label>
-        <input type="text" name="name">
+  </div>
+
+  <div class="container-mainPage">
+    <div class="Form">
+
+      <h1>Create New Account</h1>
+
+      <form method="POST" action="{{ url_for('login') }}">
+        {{ form.csrf_token() }}
+        <div class="Form-Item">{{ form.username.label }}</div>
+        <div class="Form-Item">{{ form.username }}</div>
+        <div class="Form-Item">{{ form.email.label }}</div>
+        <div class="Form-Item">{{ form.email }}</div>
+        <div class="Form-Item">{{ form.password.label }}</div>
+        <div class="Form-Item">{{ form.password }}</div>
+        <div class="Form-Item">{{ form.confirm_password.label }}</div>
+        <div class="Form-Item">{{ form.confirm_password }}</div>
+        <div class="button">{{ form.submit }}</div>
+      </form>
+
+      <div class="Form-Item">
+        <small><a href=" {{ url_for('login') }} ">Already Have An Account?</a></small>
       </div>
-      <div class="InputBox">
-        <label>Email: </label>
-        <input type="text" name="name">
-      </div>
-      <div class="InputBox">
-        <label>Password: </label>
-        <input type="text" name="name">
-      </div>
-      <div class="InputBox">
-        <label>Confirm Password: </label>
-        <input type="text" name="name">
-      </div>
-      <input class="button" type="submit" name="SubmitField" value="Submit">
-    </form>
+
+    </div>
   </div>
 
   <footer id="homePageFooter">
