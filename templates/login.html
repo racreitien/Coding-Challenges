@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <title>Sunskiff Login</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block main %}
 
-  <div class="container">
-
-    <header id="MainHeader">
-      <h1>Coding Challenges</h1>
-    </header>
-
-    <nav id="navbar">
-      <ul>
-        <li><a href="/", "/home">Home</a></li>
-        <li><a href="login">Log In</a></li>
-        <li><a href="register">Sign Up</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-
-  </div>
-
-  <div class="container-mainPage">
     <div class="Form">
 
       <h1>Sign In</h1>
@@ -34,9 +11,8 @@
         <div class="Form-Item">{{ form.email }}</div>
         <div class="Form-Item">{{ form.password.label }}</div>
         <div class="Form-Item">{{ form.password }}</div>
-        <div class="Form-Item">{{ form.remember.label }}</div>
-        <div class="Form-Item">{{ form.remember }}</div>
-        <div class="button">{{ form.submit }}</div>
+        <div class="Form-Item">{{ form.remember }}{{ form.remember.label }}</div>
+        <div class="Form-Item"><input class="button" id="submit" name="submit" type="submit" value="Login"></div>
       </form>
 
       <div class="Form-Item">
@@ -44,11 +20,5 @@
       </div>
 
     </div>
-  </div>
 
-  <footer id="homePageFooter">
-    <p>Copyright &copy; 2019 Sunskiff LLC</p>
-  </footer>
-
-</body>
-</html>
+{% endblock %}

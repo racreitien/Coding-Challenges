@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <title>Sunskiff Registration</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block main %}
 
-  <div class="container">
-
-    <header id="MainHeader">
-      <h1>Coding Challenges</h1>
-    </header>
-
-    <nav id="navbar">
-      <ul>
-        <li><a href="/", "/home">Home</a></li>
-        <li><a href="login">Log In</a></li>
-        <li><a href="register">Sign Up</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-
-  </div>
-
-  <div class="container-mainPage">
     <div class="Form">
 
-      <h1>Create New Account</h1>
+      <h1>New Account</h1>
 
-      <form method="POST" action="{{ url_for('login') }}">
+      <form method="POST">
         {{ form.csrf_token() }}
         <div class="Form-Item">{{ form.username.label }}</div>
         <div class="Form-Item">{{ form.username }}</div>
@@ -38,7 +15,7 @@
         <div class="Form-Item">{{ form.password }}</div>
         <div class="Form-Item">{{ form.confirm_password.label }}</div>
         <div class="Form-Item">{{ form.confirm_password }}</div>
-        <div class="button">{{ form.submit }}</div>
+        <div class="Form-Item"><input class="button" id="submit" name="submit" type="submit" value="Sign Up"></div>
       </form>
 
       <div class="Form-Item">
@@ -48,9 +25,4 @@
     </div>
   </div>
 
-  <footer id="homePageFooter">
-    <p>Copyright &copy; 2019 Sunskiff LLC</p>
-  </footer>
-
-</body>
-</html>
+{% endblock %}

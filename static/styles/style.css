@@ -18,19 +18,129 @@ body{
 	background-color:#eee;
 	color:#222;
 	padding:10px 20px;
-	margin:10px;
 	font-size:inherit;
+	margin:10px 0px;
 }
 
 .Form {
 		border:2px dotted;
-		width:50%;
+		width:60%;
 		margin:0 auto;
 }
 
 .Form-Item{
-	font: 16px Helvetica;
-	margin:10px;
+	font: 20px Helvetica;
+	margin:20px;
+}
+
+.Form-Item a{
+	color:#b55;
+}
+
+.Form-Item a:hover{
+	color:white;
+}
+
+#remember{
+	margin-right:10px;
+}
+
+h1{
+	text-align:center;
+}
+
+#MainHeader{
+	background-color:#aaa;
+	font-size:20px;
+	font-style:italic;
+	padding:5px;
+	text-align:center;
+	margin:0;
+}
+
+#navbar{
+	background-color:#efefef;
+}
+
+#navbar a:hover{
+	color:#bbb;
+}
+
+#navbar ul{
+	list-style:none;
+	padding:5px;
+	text-align:center;
+	margin:0;
+}
+
+#navbar li{
+	display:inline;
+}
+
+#navbar a{
+	color:#222;
+	text-decoration:none;
+	font-size:14px;
+	padding:30px;
+}
+
+#homePageFooter{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	margin:5px;
+}
+
+@media(max-width:600px){
+	#MainHeader{
+		width:100%
+	}
+}body{
+	background-color:#333;
+	color:#eee;
+	font-family:Helvetica, sans-serif;
+	font-size:16px;
+	margin:0;
+}
+
+.container{
+	overflow:hidden;
+}
+
+.container-mainPage{
+	margin-top:2em;
+}
+
+.button{
+	background-color:#eee;
+	color:#222;
+	padding:10px 20px;
+	font-size:inherit;
+	margin:10px 0px;
+}
+
+.Form {
+		border:2px dotted;
+		width:60%;
+		margin:0 auto;
+}
+
+.Form-Item{
+	font: 20px Helvetica;
+	margin:20px;
+}
+
+.Form-Item a{
+	color:#b55;
+}
+
+.Form-Item a:hover{
+	color:white;
+}
+
+#remember{
+	margin-right:10px;
 }
 
 h1{
